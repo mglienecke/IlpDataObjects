@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.constant;
+package uk.ac.ed.inf.ilp.constant;
 
 /**
  * defines the order of the coordinates for the "central" @see NamedRegion

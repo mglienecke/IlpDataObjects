@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.constant;
+package uk.ac.ed.inf.ilp.constant;
 
 /**
  * error reason codes for an invalid order

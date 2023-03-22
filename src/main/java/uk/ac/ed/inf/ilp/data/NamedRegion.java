@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.core;
+package uk.ac.ed.inf.ilp.data;
 
 /**
  * defines a closed polygon with @vertices as the corner points. See <a href="https://en.wikipedia.org/wiki/Simple_polygon">simple polygon</a>.

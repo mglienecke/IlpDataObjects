@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.core;
+package uk.ac.ed.inf.ilp.data;
 
 
 import java.time.DayOfWeek;

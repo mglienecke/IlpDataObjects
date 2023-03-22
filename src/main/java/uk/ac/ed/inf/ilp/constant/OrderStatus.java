@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.constant;
+package uk.ac.ed.inf.ilp.constant;
 
 /**
  * the status an order can have

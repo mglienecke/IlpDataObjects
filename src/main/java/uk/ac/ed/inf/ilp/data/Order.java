@@ -1,14 +1,14 @@
-package uk.ac.ed.inf.ilp.data.core;
+package uk.ac.ed.inf.ilp.data;
 
-import uk.ac.ed.inf.ilp.data.constant.InvalidOrderReasonCodes;
-import uk.ac.ed.inf.ilp.data.constant.OrderStatus;
+import uk.ac.ed.inf.ilp.constant.InvalidOrderReasonCodes;
+import uk.ac.ed.inf.ilp.constant.OrderStatus;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * defines an order which is available in the system
+ * defines an order in the PizzaDronz service
  */
 public final class Order {
     private String orderNo = "";

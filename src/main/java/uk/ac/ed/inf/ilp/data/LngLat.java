@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.core;
+package uk.ac.ed.inf.ilp.data;
 
 /**
  * defines a point using longitude @lng and latitude @lat

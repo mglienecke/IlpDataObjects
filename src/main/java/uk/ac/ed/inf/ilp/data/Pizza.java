@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilp.data.core;
+package uk.ac.ed.inf.ilp.data;
 
 /**
  * defines a pizza which can be ordered from a restaurant
