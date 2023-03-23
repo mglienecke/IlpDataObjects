@@ -5,9 +5,9 @@ package uk.ac.ed.inf.ilp.constant;
  */
 public final class InvalidOrderReasonCodes {
     /**
-     * undefined error
+     * no error present
      */
-    public static final int UNDEFINED = 0;
+    public static final int NO_ERROR = 0;
 
     /**
      * the card number is incorrect

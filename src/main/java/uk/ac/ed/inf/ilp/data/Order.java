@@ -12,9 +12,9 @@ import java.util.Objects;
  */
 public final class Order {
     private String orderNo = "";
-    private LocalDate orderDate = LocalDate.MIN;
+    private LocalDate orderDeliveryDate = LocalDate.MIN;
     private OrderStatus orderStatus = OrderStatus.UNDEFINED;
-    private int statusReasonCode = InvalidOrderReasonCodes.UNDEFINED;
+    private int statusReasonCode = InvalidOrderReasonCodes.NO_ERROR;
     private String customer = "";
     private String creditCardNumber = "";
     private String creditCardExpiry = "";
@@ -22,22 +22,41 @@ public final class Order {
     private int priceTotalInPence = 0;
     private Pizza[] pizzasInOrder = new Pizza[0];
 
+
     /**
-     *
+     * full constructor for an order
+     * @param orderNo the number
+     * @param orderDeliveryDate is when the order is due (to be delivered)
+     * @param orderStatus is the status
+     * @param statusReasonCode is a reason code for the status (extended explanation)
+     * @param customer is who ordered the pizzas
+     * @param creditCardNumber is the CC to be used (16 digit versions only)
+     * @param creditCardExpiry is when the card expires
+     * @param cvv is the CVV of the card
+     * @param priceTotalInPence is the total price of the order
+     * @param pizzasInOrder is the list of pizzas in the order
      */
-    public Order(String orderNo, LocalDate orderDate, OrderStatus orderStatus, int statusReasonCode, String customer, String creditCardNumber, String creditCardExpiry, String cvv, int priceTotalInPence, Pizza[] pizzasInOrder) {
-        this(orderNo, orderDate, customer, creditCardNumber, creditCardExpiry, cvv, priceTotalInPence, pizzasInOrder);
+    public Order(String orderNo, LocalDate orderDeliveryDate, OrderStatus orderStatus, int statusReasonCode, String customer, String creditCardNumber, String creditCardExpiry, String cvv, int priceTotalInPence, Pizza[] pizzasInOrder) {
+        this(orderNo, orderDeliveryDate, customer, creditCardNumber, creditCardExpiry, cvv, priceTotalInPence, pizzasInOrder);
 
         this.setOrderStatus(orderStatus);
         this.setStatusReasonCode(statusReasonCode);
     }
 
     /**
-     *
+     * full constructor for an order
+     * @param orderNo the number
+     * @param orderDeliveryDate is when the order is due (to be delivered)
+     * @param customer is who ordered the pizzas
+     * @param creditCardNumber is the CC to be used (16 digit versions only)
+     * @param creditCardExpiry is when the card expires
+     * @param cvv is the CVV of the card
+     * @param priceTotalInPence is the total price of the order
+     * @param pizzasInOrder is the list of pizzas in the order
      */
-    public Order(String orderNo, LocalDate orderDate, String customer, String creditCardNumber, String creditCardExpiry, String cvv, int priceTotalInPence, Pizza[] pizzasInOrder) {
+    public Order(String orderNo, LocalDate orderDeliveryDate, String customer, String creditCardNumber, String creditCardExpiry, String cvv, int priceTotalInPence, Pizza[] pizzasInOrder) {
         this.setOrderNo(orderNo);
-        this.setOrderDate(orderDate);
+        this.setOrderDate(orderDeliveryDate);
         this.setCustomer(customer);
         this.setCreditCardNumber(creditCardNumber);
         this.setCreditCardExpiry(creditCardExpiry);
@@ -60,11 +79,11 @@ public final class Order {
     }
 
     public LocalDate getOrderDate() {
-        return orderDate;
+        return orderDeliveryDate;
     }
 
-    public void setOrderDate(LocalDate orderDate) {
-        this.orderDate = orderDate;
+    public void setOrderDate(LocalDate orderDeliveryDate) {
+        this.orderDeliveryDate = orderDeliveryDate;
     }
 
     public OrderStatus getOrderStatus() {
