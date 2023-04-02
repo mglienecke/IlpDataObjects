@@ -1,6 +1,6 @@
 package uk.ac.ed.inf.ilp.data;
 
-import uk.ac.ed.inf.ilp.constant.InvalidOrderReasonCodes;
+import uk.ac.ed.inf.ilp.constant.InvalidOrderReasonCode;
 import uk.ac.ed.inf.ilp.constant.OrderStatus;
 
 import java.time.LocalDate;
@@ -14,7 +14,7 @@ public final class Order {
     private String orderNo = "";
     private LocalDate orderDeliveryDate = LocalDate.MIN;
     private OrderStatus orderStatus = OrderStatus.UNDEFINED;
-    private int statusReasonCode = InvalidOrderReasonCodes.NO_ERROR;
+    private InvalidOrderReasonCode invalidReasonCode = InvalidOrderReasonCode.NO_ERROR;
     private String customer = "";
     private String creditCardNumber = "";
     private String creditCardExpiry = "";
@@ -28,7 +28,7 @@ public final class Order {
      * @param orderNo the number
      * @param orderDeliveryDate is when the order is due (to be delivered)
      * @param orderStatus is the status
-     * @param statusReasonCode is a reason code for the status (extended explanation)
+     * @param invalidReasonCode is a reason code for the status (extended explanation)
      * @param customer is who ordered the pizzas
      * @param creditCardNumber is the CC to be used (16 digit versions only)
      * @param creditCardExpiry is when the card expires
@@ -36,11 +36,11 @@ public final class Order {
      * @param priceTotalInPence is the total price of the order
      * @param pizzasInOrder is the list of pizzas in the order
      */
-    public Order(String orderNo, LocalDate orderDeliveryDate, OrderStatus orderStatus, int statusReasonCode, String customer, String creditCardNumber, String creditCardExpiry, String cvv, int priceTotalInPence, Pizza[] pizzasInOrder) {
+    public Order(String orderNo, LocalDate orderDeliveryDate, OrderStatus orderStatus, InvalidOrderReasonCode invalidReasonCode, String customer, String creditCardNumber, String creditCardExpiry, String cvv, int priceTotalInPence, Pizza[] pizzasInOrder) {
         this(orderNo, orderDeliveryDate, customer, creditCardNumber, creditCardExpiry, cvv, priceTotalInPence, pizzasInOrder);
 
         this.setOrderStatus(orderStatus);
-        this.setStatusReasonCode(statusReasonCode);
+        this.setInvalidOrderReasonCode(invalidReasonCode);
     }
 
     /**
@@ -65,9 +65,16 @@ public final class Order {
         this.setPizzasInOrder(pizzasInOrder);
     }
 
+    /**
+     * bare bone default constructor
+     */
+    public Order(){
+
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(getOrderNo(), getOrderDate(), getOrderStatus(), getStatusReasonCode(), getCustomer(), getCreditCardNumber(), getCreditCardExpiry(), getCvv(), getPriceTotalInPence(), Arrays.hashCode(getPizzasInOrder()));
+        return Objects.hash(getOrderNo(), getOrderDate(), getOrderStatus(), getInvalidOrderReasonCode(), getCustomer(), getCreditCardNumber(), getCreditCardExpiry(), getCvv(), getPriceTotalInPence(), Arrays.hashCode(getPizzasInOrder()));
     }
 
     public String getOrderNo() {
@@ -94,12 +101,12 @@ public final class Order {
         this.orderStatus = orderStatus;
     }
 
-    public int getStatusReasonCode() {
-        return statusReasonCode;
+    public InvalidOrderReasonCode getInvalidOrderReasonCode() {
+        return invalidReasonCode;
     }
 
-    public void setStatusReasonCode(int statusReasonCode) {
-        this.statusReasonCode = statusReasonCode;
+    public void setInvalidOrderReasonCode(InvalidOrderReasonCode invalidReasonCode) {
+        this.invalidReasonCode = invalidReasonCode;
     }
 
     public String getCustomer() {

@@ -3,49 +3,49 @@ package uk.ac.ed.inf.ilp.constant;
 /**
  * error reason codes for an invalid order
  */
-public final class InvalidOrderReasonCodes {
+public enum InvalidOrderReasonCode {
     /**
      * no error present
      */
-    public static final int NO_ERROR = 0;
+    NO_ERROR,
 
     /**
      * the card number is incorrect
      */
-    public static final int CARD_NUMBER = 1;
+    CARD_NUMBER,
 
     /**
      * expiry date problem
      */
-    public static final int EXPIRY_DATE = 2;
+    EXPIRY_DATE,
 
     /**
      * CVC is wrong
      */
-    public static final int CVC = 3;
+    CVV,
 
     /**
      * order total is wrong
      */
-    public static final int TOTAL = 4;
+    TOTAL,
 
     /**
      * a pizza in the order is undefined
      */
-    public static final int PIZZA_NOT_DEFINED = 5;
+    PIZZA_NOT_DEFINED,
 
     /**
      * too many pizzas ordered
      */
-    public static final int MAX_PIZZA_COUNT_EXCEEDED = 6;
+    MAX_PIZZA_COUNT_EXCEEDED,
 
     /**
      * pizzas were ordered from multiple restaurants
      */
-    public static final int MULTIPLE_RESTAURANTS = 7;
+    MULTIPLE_RESTAURANTS,
 
     /**
      * the restaurant is closed on the order day
      */
-    public static final int RESTAURANT_CLOSED = 7;
+    RESTAURANT_CLOSED
 }
