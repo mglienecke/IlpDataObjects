@@ -14,7 +14,7 @@ public final class Order {
     private String orderNo = "";
     private LocalDate orderDeliveryDate = LocalDate.MIN;
     private OrderStatus orderStatus = OrderStatus.UNDEFINED;
-    private InvalidOrderReasonCode invalidReasonCode = InvalidOrderReasonCode.NO_ERROR;
+    private InvalidOrderReasonCode invalidOrderReasonCode = InvalidOrderReasonCode.NO_ERROR;
     private String customer = "";
     private String creditCardNumber = "";
     private String creditCardExpiry = "";
@@ -102,11 +102,11 @@ public final class Order {
     }
 
     public InvalidOrderReasonCode getInvalidOrderReasonCode() {
-        return invalidReasonCode;
+        return invalidOrderReasonCode;
     }
 
-    public void setInvalidOrderReasonCode(InvalidOrderReasonCode invalidReasonCode) {
-        this.invalidReasonCode = invalidReasonCode;
+    public void setInvalidOrderReasonCode(InvalidOrderReasonCode invalidOrderReasonCode) {
+        this.invalidOrderReasonCode = invalidOrderReasonCode;
     }
 
     public String getCustomer() {
