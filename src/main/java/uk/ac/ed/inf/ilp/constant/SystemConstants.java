@@ -31,8 +31,8 @@ public final class SystemConstants {
     public static final int DRONE_MAX_MOVES = 2000;
 
     /**
-     * the central area / region name
+     * the central region name
      */
-    public static final String CENTRAL_AREA_NAME = "central";
+    public static final String CENTRAL_REGION_NAME = "central";
 
 }

@@ -7,7 +7,7 @@ import uk.ac.ed.inf.ilp.data.NamedRegion;
 /**
  * implement the needed computations for a LngLat
  */
-public interface LngLatComputations {
+public interface LngLatHandling {
     /**
      * get the distance between two positions
      * @param startPosition is where the start is
@@ -34,8 +34,8 @@ public interface LngLatComputations {
         if (centralArea == null){
             throw new IllegalArgumentException("the named region is null");
         }
-        if (centralArea.name().equals(SystemConstants.CENTRAL_AREA_NAME) == false) {
-            throw new IllegalArgumentException("the named region: " + centralArea.name() + " is not valid - must be: " + SystemConstants.CENTRAL_AREA_NAME);
+        if (centralArea.name().equals(SystemConstants.CENTRAL_REGION_NAME) == false) {
+            throw new IllegalArgumentException("the named region: " + centralArea.name() + " is not valid - must be: " + SystemConstants.CENTRAL_REGION_NAME);
         }
 
         return isInRegion(point, centralArea);

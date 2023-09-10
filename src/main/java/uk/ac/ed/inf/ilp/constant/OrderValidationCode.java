@@ -3,7 +3,12 @@ package uk.ac.ed.inf.ilp.constant;
 /**
  * error reason codes for an invalid order
  */
-public enum InvalidOrderReasonCode {
+public enum OrderValidationCode {
+    /**
+     * the reason code is undefined
+     */
+    UNDEFINED,
+
     /**
      * no error present
      */
@@ -12,22 +17,22 @@ public enum InvalidOrderReasonCode {
     /**
      * the card number is incorrect
      */
-    CARD_NUMBER,
+    CARD_NUMBER_INVALID,
 
     /**
      * expiry date problem
      */
-    EXPIRY_DATE,
+    EXPIRY_DATE_INVALID,
 
     /**
      * CVC is wrong
      */
-    CVV,
+    CVV_INVALID,
 
     /**
-     * order total is wrong
+     * order total is incorrect
      */
-    TOTAL,
+    TOTAL_INCORRECT,
 
     /**
      * a pizza in the order is undefined
@@ -42,7 +47,7 @@ public enum InvalidOrderReasonCode {
     /**
      * pizzas were ordered from multiple restaurants
      */
-    MULTIPLE_RESTAURANTS,
+    PIZZA_FROM_MULTIPLE_RESTAURANTS,
 
     /**
      * the restaurant is closed on the order day

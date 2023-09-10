@@ -5,7 +5,7 @@ import uk.ac.ed.inf.ilp.data.Order;
 /**
  * interface to validate an order
  */
-public interface OrderValidator {
+public interface OrderValidation {
     /**
      * validate an order an deliver a validated version
      * @param orderToValidate is the order which needs validation
