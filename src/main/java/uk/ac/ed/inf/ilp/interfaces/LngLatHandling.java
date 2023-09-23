@@ -52,7 +52,7 @@ public interface LngLatHandling {
     /**
      * find the next position if an @angle is applied to a @startPosition
      * @param startPosition is where the start is
-     * @param angle is the angle to use
+     * @param angle is the angle to use in degrees
      * @return the new position after the angle is used
      */
     LngLat nextPosition(LngLat startPosition, double angle);

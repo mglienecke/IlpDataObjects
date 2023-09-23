@@ -93,59 +93,115 @@ public final class Order {
         return Objects.hash(getOrderNo(), getOrderDate(), getOrderStatus(), getOrderValidationCode(), getPriceTotalInPence(), Arrays.hashCode(getPizzasInOrder()));
     }
 
+    /**
+     * get the order number
+     * @return the order number
+     */
     public String getOrderNo() {
         return orderNo;
     }
 
+    /**
+     * set the oder number
+     * @param orderNo is the number to set
+     */
     public void setOrderNo(String orderNo) {
         this.orderNo = orderNo;
     }
 
+    /**
+     * get date
+     * @return order date
+     */
     public LocalDate getOrderDate() {
         return orderDate;
     }
 
+    /**
+     * set date
+     * @param orderDeliveryDate is the new delivery date
+     */
     public void setOrderDate(LocalDate orderDeliveryDate) {
         this.orderDate = orderDeliveryDate;
     }
 
+    /**
+     * get the order status
+     * @return status
+     */
     public OrderStatus getOrderStatus() {
         return orderStatus;
     }
 
+    /**
+     * set the order status
+     * @param orderStatus the new status
+     */
     public void setOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
     }
 
+    /**
+     * get the validation result
+     * @return the validation code
+     */
     public OrderValidationCode getOrderValidationCode() {
         return orderValidationCode;
     }
 
+    /**
+     * set the validation result
+     * @param orderValidationCode the validation code
+     */
     public void setOrderValidationCode(OrderValidationCode orderValidationCode) {
         this.orderValidationCode = orderValidationCode;
     }
 
 
+    /**
+     * get the total price
+     * @return the total price of the order in pence
+     */
     public int getPriceTotalInPence() {
         return priceTotalInPence;
     }
 
+    /**
+     * set the price
+     * @param priceTotalInPence is the total order price
+     */
     public void setPriceTotalInPence(int priceTotalInPence) {
         this.priceTotalInPence = priceTotalInPence;
     }
 
+    /**
+     * which pizzas
+     * @return the pizzas in the order
+     */
     public Pizza[] getPizzasInOrder() {
         return pizzasInOrder;
     }
 
+    /**
+     * set the pizzas
+     * @param pizzasInOrder are the pizzas to deliver
+     */
     public void setPizzasInOrder(Pizza[] pizzasInOrder) {
         this.pizzasInOrder = pizzasInOrder;
     }
 
+    /**
+     * the credit card information
+     * @return the credit card info
+     */
     public CreditCardInformation getCreditCardInformation() {
         return creditCardInformation;
     }
 
+    /**
+     * set the credit card info
+     * @param creditCardInformation is the info to be used for credit card
+     */
     public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
         this.creditCardInformation = creditCardInformation;
     }

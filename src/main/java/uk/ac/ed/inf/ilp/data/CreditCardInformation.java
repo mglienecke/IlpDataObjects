@@ -28,26 +28,50 @@ public class CreditCardInformation {
         this.setCvv(cvv);
     }
 
+    /**
+     * get the number
+     * @return the credit card number
+     */
     public String getCreditCardNumber() {
         return creditCardNumber;
     }
 
+    /**
+     * set the number
+     * @param creditCardNumber is the new number to use
+     */
     public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
+    /**
+     * get the expiry
+     * @return the expiry date
+     */
     public String getCreditCardExpiry() {
         return creditCardExpiry;
     }
 
+    /**
+     * set expiry
+     * @param creditCardExpiry is the new expiry date
+     */
     public void setCreditCardExpiry(String creditCardExpiry) {
         this.creditCardExpiry = creditCardExpiry;
     }
 
+    /**
+     * get CVV
+     * @return the CVV of the card
+     */
     public String getCvv() {
         return cvv;
     }
 
+    /**
+     * set CVV
+     * @param cvv the new CVV to use
+     */
     public void setCvv(String cvv) {
         this.cvv = cvv;
     }
