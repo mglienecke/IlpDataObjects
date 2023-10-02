@@ -29,6 +29,13 @@ public class CreditCardInformation {
     }
 
     /**
+     * default constructor for the credit card - does nothing except defaults
+     */
+    public CreditCardInformation() {
+
+    }
+
+    /**
      * get the number
      * @return the credit card number
      */

@@ -79,6 +79,7 @@ public final class Order {
         this.setOrderDate(orderDeliveryDate);
         this.setPriceTotalInPence(priceTotalInPence);
         this.setPizzasInOrder(pizzasInOrder);
+        this.setCreditCardInformation(creditCardInformation);
     }
 
     /**
