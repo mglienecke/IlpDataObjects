@@ -17,7 +17,7 @@ public interface LngLatHandling {
     double distanceTo(LngLat startPosition, LngLat endPosition);
 
     /**
-     * check if two positions are close (<= than SystemConstants.DRONE_IS_CLOSE_DISTANCE)
+     * check if two positions are close (< than SystemConstants.DRONE_IS_CLOSE_DISTANCE)
      * @param startPosition is the starting position
      * @param otherPosition is the position to check
      * @return if the positions are close
