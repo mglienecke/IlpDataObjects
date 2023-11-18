@@ -34,7 +34,7 @@ public interface LngLatHandling {
         if (centralArea == null){
             throw new IllegalArgumentException("the named region is null");
         }
-        if (centralArea.name().equals(SystemConstants.CENTRAL_REGION_NAME) == false) {
+        if (!centralArea.name().equals(SystemConstants.CENTRAL_REGION_NAME)) {
             throw new IllegalArgumentException("the named region: " + centralArea.name() + " is not valid - must be: " + SystemConstants.CENTRAL_REGION_NAME);
         }
 

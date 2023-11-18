@@ -35,4 +35,14 @@ public final class SystemConstants {
      */
     public static final String CENTRAL_REGION_NAME = "central";
 
+    /**
+     * Longitude AT
+     */
+    public static final double APPLETON_LNG = -3.186874;
+
+    /**
+     * Latitude AT
+     */
+    public static final double APPLETON_LAT = 55.944494;
+
 }
