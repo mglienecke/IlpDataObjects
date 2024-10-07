@@ -52,5 +52,15 @@ public enum OrderValidationCode {
     /**
      * the restaurant is closed on the order day
      */
-    RESTAURANT_CLOSED
+    RESTAURANT_CLOSED,
+
+    /**
+     * a pizza was ordered with an invalid price
+     */
+    PRICE_FOR_PIZZA_INVALID,
+
+    /**
+     * the order contains no pizzas
+     */
+    EMPTY_ORDER
 }

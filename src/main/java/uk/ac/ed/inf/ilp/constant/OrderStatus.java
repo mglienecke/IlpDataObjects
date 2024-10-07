@@ -4,10 +4,6 @@ package uk.ac.ed.inf.ilp.constant;
  * the status an order can have
  */
 public enum OrderStatus {
-    /**
-     * it was delivered
-     */
-    DELIVERED,
 
     /**
      * it is invalid
@@ -15,12 +11,12 @@ public enum OrderStatus {
     INVALID,
 
     /**
-     * the state is currently undefined
+     * the state is valid
      */
-    UNDEFINED,
+    VALID,
 
     /**
-     * the order is valid as such, yet has not been delivered
+     * the state is currently undefined
      */
-    VALID_BUT_NOT_DELIVERED
+    UNDEFINED
 }

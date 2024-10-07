@@ -1,0 +1,22 @@
+{
+  "orderNo": "092884D0",
+  "orderDate": "2024-01-28",
+  "orderStatus": "VALID",
+  "orderValidationCode": "NO_ERROR",
+  "priceTotalInPence": 2400,
+  "pizzasInOrder": [
+    {
+      "name": "R6: Sucuk delight",
+      "priceInPence": 1400
+    },
+    {
+      "name": "R6: Dreams of Syria",
+      "priceInPence": 900
+    }
+  ],
+  "creditCardInformation": {
+    "creditCardNumber": "4485959141852684",
+    "creditCardExpiry": "10/25",
+    "cvv": "816"
+  }
+}

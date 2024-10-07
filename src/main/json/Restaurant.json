@@ -1,0 +1,24 @@
+{
+  "name": "Civerinos Slice",
+  "location": {
+    "lng": -3.1912869215011597,
+    "lat": 55.945535152517735
+  },
+  "openingDays": [
+    "MONDAY",
+    "TUESDAY",
+    "FRIDAY",
+    "SATURDAY",
+    "SUNDAY"
+  ],
+  "menu": [
+    {
+      "name": "Margarita",
+      "priceInPence": 1000
+    },
+    {
+      "name": "Calzone",
+      "priceInPence": 1400
+    }
+  ]
+}
